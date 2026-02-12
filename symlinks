@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+mkdir -p "$HOME/.config"
+
+link() {
+        local src="$1"
+        local dest="$2"
+
+        if [ -e "$dest" ] && [ ! -L "$dest" ]; then
+                echo "Criando backup de $dest"
+                mv -f "$dest" "$dest.backup"
+        fi
+
+        ln -sf "$src" "$dest"
+}
+
+link "$DIR/bash/custom_bashrc" "$HOME/.bashrc"
+link "$DIR/kitty/kitty.conf" "$HOME/.config/kitty/custom_kitty.conf"
+link "$DIR/nvim" "$HOME/.config/nvim"

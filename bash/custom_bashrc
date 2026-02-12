@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+[[ $- != *i* ]] && return
+
+if [ -f "/etc/bash.bashrc" ]; then
+        . "/etc/bash.bashrc"
+fi
+
+# Clear console
+clear() {
+        command clear
+        printf '\e[3J'
+}
+alias cls='clear'
+
+# Turn off system beep in console
+xset b off
+xset b -1 0 0
