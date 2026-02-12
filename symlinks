@@ -14,7 +14,7 @@ link() {
                 mv -f "$dest" "$dest.backup"
         fi
 
-        ln -sf "$src" "$dest"
+        ln -sfn "$src" "$dest"
 }
 
 link "$DIR/bash/custom_bashrc" "$HOME/.bashrc"
