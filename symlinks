@@ -3,23 +3,12 @@ set -e
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-mkdir -p "$HOME/.config"
+PACKAGES=(kitty nvim)
 
-link() {
-        local src="$1"
-        local dest="$2"
+for pkg in "${PACKAGES[@]}"; do
+	stow -vRt "$HOME" "$pkg"
+done
 
-        if [ -e "$dest" ] && [ ! -L "$dest" ]; then
-                echo "Criando backup de $dest"
-                mv -f "$dest" "$dest.backup"
-        fi
-
-        ln -sfn "$src" "$dest"
-}
-
-link "$DIR/kitty" "$HOME/.config/kitty"
-link "$DIR/nvim" "$HOME/.config/nvim"
-
-if ! grep -qF "$DIR/bash/custom_bashrc" "$HOME/.bashrc"; then
-        echo "source $DIR/bash/custom_bashrc" >> "$HOME/.bashrc"
+if ! grep -qF "$DIR/bash/.custom_bashrc" "$HOME/.bashrc"; then
+        echo "source $DIR/bash/.custom_bashrc" >> "$HOME/.bashrc"
 fi
