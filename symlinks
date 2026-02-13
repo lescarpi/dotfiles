@@ -17,6 +17,9 @@ link() {
         ln -sfn "$src" "$dest"
 }
 
-link "$DIR/bash/custom_bashrc" "$HOME/.bashrc"
-link "$DIR/kitty/kitty.conf" "$HOME/.config/kitty/custom_kitty.conf"
+link "$DIR/kitty" "$HOME/.config/kitty"
 link "$DIR/nvim" "$HOME/.config/nvim"
+
+if ! grep -qF "$DIR/bash/custom_bashrc" "$HOME/.bashrc"; then
+        echo "source $DIR/bash/custom_bashrc" >> "$HOME/.bashrc"
+fi

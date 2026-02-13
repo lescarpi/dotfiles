@@ -13,6 +13,3 @@ clear() {
 }
 alias cls='clear'
 
-# Turn off system beep in console
-xset b off
-xset b -1 0 0
