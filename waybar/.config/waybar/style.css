@@ -3,7 +3,17 @@
         font-family: "JetBrainsMono Nerd Font";
         font-size: 13px;
         color: #ffffff;
-        border-radius: 20px;
+        border-radius: 0px;
+        padding: 0;
+        margin: 0;
+}
+
+.modules-center {
+        background-color: rgba(0, 0, 25, 0.55);
+        padding: 6px 12px;
+        margin: 2px 0 0 0;
+        border-radius: 28px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 window {
@@ -11,7 +21,7 @@ window {
 }
 
 window#waybar {
-        background: rgba(0, 0, 0, 0);
+        background: transparent;
 }
 
 .modules-center {
@@ -25,7 +35,10 @@ window#waybar {
 #wireplumber,
 #network,
 #battery {
-        padding: 0 10px;
+        padding: 0 8px;
+        border-radius: 0px;
+        border:none;
+        box-shadow: none;
 }
 
 #battery {
@@ -38,4 +51,31 @@ window#waybar {
 
 #battery.critical {
         color: red;
+}
+
+#workspaces {
+        background: transparent;
+        padding: 0;
+        margin: 0 10px 0 10px;
+        border: none;
+        box-shadow: none;
+}
+
+#workspaces button {
+        padding: 0px 6px;
+        margin: 0px 2px;
+        border-radius: 16px;
+        color: grey;
+        background: transparent;
+        transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+        background: linear-gradient(135deg, blue 0%, purple 50%, red 100%);
+        min-width: 40px;
+        transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+        
 }
