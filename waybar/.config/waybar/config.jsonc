@@ -1,0 +1,53 @@
+{
+        "layer": "top",
+        "postion": "top",
+        "margin-top": 5,
+
+        "modules-center": [
+                "tray",
+                "clock",
+                "niri/workspaces",
+                "wireplumber",
+                "network",
+                "battery"
+        ],
+
+        "tray": {
+                "icon-size": 15,
+                "spacing": 10
+        },
+
+        "niri/workspaces": {
+                "format": "{icon}",
+                "on-click": "activate"
+        },
+
+        "wireplumber": {
+                "format": "  {volume}%",
+                "format-muted": "  {volume}%",
+                "on-click": "pavucontrol"
+        },
+
+        "battery": {
+                "states": {
+                        "warning": 30,
+                        "critical": 15
+                },
+                "format": "{icon} {capacity}%",
+                "format-icons": ["󰁻","󰁽","󰁿","󰂁"],
+                "format-charging": "󰂄 {capacity}%",
+                "format-full": "󰁹 {capacity}%"
+        },
+
+        "clock": {
+                "format": "{:%b. %d, %H:%M}"
+        },
+
+        "network": {
+                "format-wifi": "{icon}",
+                "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+                "format-disconnected": "󰤮",
+                "tooltip-format-wifi": "{essid}",
+                "on-click": "nmtui",
+        }
+}
