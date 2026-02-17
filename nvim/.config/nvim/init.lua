@@ -4,6 +4,22 @@ require("config.lazy")
 -- Clipboard
 vim.opt.clipboard = "unnamedplus"
 
+vim.g.clipboard = {
+        name = 'wl-clipboard',
+        copy = {
+                ['+'] = 'wl-copy',
+                ['*'] = 'wl-copy',
+        },
+        paste = {
+                ['+'] = 'wl-paste',
+                ['*'] = 'wl-paste'
+        },
+        cache_enabled = 1
+}
+
+vim.keymap.set({"n", "v"}, "x", '"_x')
+vim.keymap.set({"n", "v"}, "d", '"_d')
+
 -- Scroll
 vim.opt.scrolloff = 999
 
