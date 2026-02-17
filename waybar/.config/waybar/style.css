@@ -76,6 +76,7 @@ window#waybar {
 }
 
 #workspaces button.active {
+        margin: 5px 0;
         background: linear-gradient(135deg, #f6c177 0%, #16539c 100%);
         min-width: 55px;
         transition: all 0.3s ease-in-out;
