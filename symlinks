@@ -3,7 +3,7 @@ set -e
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-PACKAGES=(kitty nvim niri waybar)
+PACKAGES=(kitty nvim niri waybar fuzzel)
 
 for pkg in "${PACKAGES[@]}"; do
 	stow -vRt "$HOME" "$pkg"
