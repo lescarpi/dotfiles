@@ -1,21 +1,22 @@
 {
         "layer": "top",
-        "position": "top",
-
-        "modules-left": [
-                "niri/workspaces"
-        ],
+        "postion": "top",
+        "margin-top": 5,
 
         "modules-center": [
+                "tray",
                 "clock",
-        ],
-
-        "modules-right": [
+                "niri/workspaces",
                 "wireplumber",
                 "network",
                 "battery",
                 "custom/powermenu"
         ],
+
+        "tray": {
+                "icon-size": 15,
+                "spacing": 10
+        },
 
         "niri/workspaces": {
                 "format": "{icon}",
@@ -23,11 +24,9 @@
         },
 
         "wireplumber": {
-                "format": "",
-                "format-muted": "",
-                "on-click": "pavucontrol",
-                "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-                "tooltip-format": "{volume}%"
+                "format": "  {volume}%",
+                "format-muted": "  {volume}%",
+                "on-click": "pavucontrol"
         },
 
         "battery": {
@@ -35,16 +34,14 @@
                         "warning": 30,
                         "critical": 15
                 },
-                "format": "{icon}",
+                "format": "{icon} {capacity}%",
                 "format-icons": ["󰁻","󰁽","󰁿","󰂁"],
-                "format-charging": "󰂄",
-                "format-full": "󰁹",
-                "tooltip-format": "{capacity}%"
+                "format-charging": "󰂄 {capacity}%",
+                "format-full": "󰁹 {capacity}%"
         },
 
         "clock": {
-                "format": "{:%b. %d, %H:%M}",
-                "tooltip": false
+                "format": "{:%b. %d, %H:%M}"
         },
 
         "network": {
@@ -56,8 +53,7 @@
         },
 
         "custom/powermenu": {
-                "format": "",
+                "format": "⏻",
                 "on-click": "~/.config/waybar/scripts/powermenu.sh",
-                "tooltip": false
         }
 }

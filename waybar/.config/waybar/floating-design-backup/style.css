@@ -1,23 +1,19 @@
 * {
         border: none;
-        font-family: "AdwaitaMono Nerd Font";
-        font-size: 16px;
+        font-family: "JetBrainsMono Nerd Font";
+        font-size: 13px;
         color: #ffffff;
         border-radius: 0px;
         padding: 0;
         margin: 0;
 }
 
-.modules-left {
-        margin: 0 0 0 7px;
-}
-
 .modules-center {
-        padding: 7px 0 7px 0;
-}
-
-.modules-right {
-        margin: 0 7px 0 0;
+        background-color: rgba(0, 0, 25, 0.55);
+        padding: 6px 12px;
+        margin: 2px 0 0 0;
+        border-radius: 28px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 window {
@@ -25,25 +21,25 @@ window {
 }
 
 window#waybar {
-        background: #191724;
+        background: transparent;
 }
 
+.modules-center {
+        background-color: rgba(0, 0, 25, 0.55);
+        margin: 2px 0 0 0;
+}
+
+#tray,
 #clock,
 #workspaces,
 #wireplumber,
 #network,
 #battery,
 #custom-powermenu {
-        min-height: 15px;
-        padding: 0 9px;
+        padding: 0 8px;
         border-radius: 0px;
         border:none;
         box-shadow: none;
-}
-
-/* Overriding padding because power icon is smaller */
-#custom-powermenu {
-        padding: 0 9px 0 3px;
 }
 
 #battery {
@@ -76,7 +72,11 @@ window#waybar {
 }
 
 #workspaces button.active {
-        background: linear-gradient(135deg, #f6c177 0%, #16539c 100%);
-        min-width: 55px;
+        background: linear-gradient(135deg, blue 0%, purple 50%, red 100%);
+        min-width: 40px;
         transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+        
 }

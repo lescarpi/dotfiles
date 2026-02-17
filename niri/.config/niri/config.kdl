@@ -63,9 +63,7 @@ layout {
     center-focused-column "never"
 
     preset-column-widths {
-        proportion 0.33333
         proportion 0.5
-        proportion 0.66667
     }
 
     // preset-window-heights { }
@@ -80,7 +78,7 @@ layout {
         // Gredient overrides
         // active-color "#7fc8ff"
         
-        active-gradient from="#7171e3" to="#67e4eb" angle=170
+        active-gradient from="#f6c177" to="#16539c" angle=170
     }
 
     border {

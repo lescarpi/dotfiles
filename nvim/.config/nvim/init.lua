@@ -20,8 +20,9 @@ vim.opt.tabstop = 8
 vim.opt.shiftwidth = 8
 vim.opt.expandtab = true
 
--- Color Scheme
-vim.opt.termguicolors = true
+-- Cursor
+vim.opt.cursorline = true
+vim.opt.guicursor = "i-ci-ve:ver25-blinkwait700-blinkoff400-blinkon250"
 
 -- PageUp and PageDown
 vim.keymap.set("i", "<PageDown>", "<Nop>")
