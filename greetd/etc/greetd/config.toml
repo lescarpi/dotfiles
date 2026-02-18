@@ -1,0 +1,6 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "tuigreet --time --cmd niri-session --remember --theme 'time=blue;container=brightblack;prompt=cyan;border=magenta'"
+user = "greeter"
