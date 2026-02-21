@@ -13,3 +13,5 @@ clear() {
 }
 alias cls='clear'
 
+PS1="\w \$ "
+PROMPT_DIRTRIM=2

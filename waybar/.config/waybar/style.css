@@ -25,7 +25,7 @@ window {
 }
 
 window#waybar {
-        background: #191724;
+        background: #00001F;
 }
 
 #clock,
@@ -77,7 +77,7 @@ window#waybar {
 
 #workspaces button.active {
         margin: 5px 0;
-        background: linear-gradient(135deg, #f6c177 0%, #16539c 100%);
+        background: linear-gradient(110deg, #F1009C 0%, #5B0080 100%);
         min-width: 55px;
         transition: all 0.3s ease-in-out;
 }
