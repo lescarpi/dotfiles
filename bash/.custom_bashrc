@@ -13,5 +13,5 @@ clear() {
 }
 alias cls='clear'
 
-PS1="\w \$ "
+PS1="\e[38;5;46m\]\w \$\e[0m\] "
 PROMPT_DIRTRIM=2

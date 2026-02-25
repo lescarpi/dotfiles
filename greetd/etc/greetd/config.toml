@@ -1,6 +1,6 @@
 [terminal]
-vt = 1
+vt = 7
 
 [default_session]
-command = "tuigreet --time --cmd niri-session --remember --theme 'time=blue;container=brightblack;prompt=cyan;border=magenta'"
-user = "greeter"
+command = "tuigreet --time --cmd 'dbus-run-session niri --session' --remember --theme 'time=blue;container=brightblack;prompt=cyan;border=magenta'"
+user = "greetd"

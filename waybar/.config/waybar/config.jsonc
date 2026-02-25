@@ -35,10 +35,10 @@
                         "warning": 30,
                         "critical": 15
                 },
-                "format": "{icon}",
+                "format": "{icon} ",
                 "format-icons": ["󰁻","󰁽","󰁿","󰂁"],
-                "format-charging": "󰂄",
-                "format-full": "󰁹",
+                "format-charging": "󰂄 ",
+                "format-full": "󰁹 ",
                 "tooltip-format": "{capacity}%"
         },
 
@@ -52,7 +52,7 @@
                 "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
                 "format-disconnected": "󰤮",
                 "tooltip-format-wifi": "{essid}",
-                "on-click": "nmtui",
+                "on-click": "kitty --class iwctl-ui -e iwctl",
         },
 
         "custom/powermenu": {
