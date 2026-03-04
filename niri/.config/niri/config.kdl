@@ -138,6 +138,16 @@ window-rule {
 }
 
 window-rule {
+        match app-id=r#"firefox"#
+        open-maximized-to-edges true
+}
+
+window-rule {
+        match app-id=r#"codium"#
+        open-maximized-to-edges true
+}
+
+window-rule {
         match app-id="^iwctl-ui$"
         open-floating true
 }
